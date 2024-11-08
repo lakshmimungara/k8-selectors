@@ -1,3 +1,4 @@
+
 apiVersion: v1
 kind: Pod
 metadata:
@@ -5,8 +6,7 @@ metadata:
 spec:
   affinity:
     nodeAffinity:
-		# soft rule 
-		preferredDuringSchedulingIgnoredDuringExecution:
+      preferredDuringSchedulingIgnoredDuringExecution:
       - weight: 1
         preference:
           matchExpressions:
@@ -25,3 +25,4 @@ spec:
     operator: "Equal"
     value: "gpu"
     effect: "NoSchedule"
+    
